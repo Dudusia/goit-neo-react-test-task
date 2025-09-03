@@ -1,6 +1,24 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Inter', sans-serif;
+
+  /* Colors */
+  --main-color: #101828;
+  --text-color: #475467;
+  --white-color: #fff;
+  --inputs-color: #f7f7f7;
+  --badges-color: #f2f4f7;
+  --gray-color: #6c717b;
+  --light-gray-color: #dadde1;
+  --button-color: #e44848;
+  --button-hover-color: #d84343;
+  --rating-color: #ffc531;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: var(--primary-font);
   line-height: 1.5;
+  color: var(--main-color);
 }
 
 h1,
@@ -12,23 +30,28 @@ h6,
 p {
   margin: 0;
 }
+
 ul,
 ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+
 a {
   text-decoration: none;
   color: currentColor;
 }
+
 button {
   font-family: inherit;
   cursor: pointer;
 }
+
 address {
   font-style: normal;
 }
+
 img {
   display: block;
   max-width: 100%;
