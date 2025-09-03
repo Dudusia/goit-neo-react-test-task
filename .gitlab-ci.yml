@@ -66,6 +66,9 @@ tf:apply:
   script:
     - cd "${TF_ROOT}"
     - gitlab-terraform apply
+  environment:
+    name: ops-$CI_PROJECT_NAME
+  resource_group: "${TF_STATE_NAME}"
   # Triggers only from main with the key word bootstrap
   rules:
     - if:
