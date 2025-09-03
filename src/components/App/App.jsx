@@ -1,15 +1,20 @@
 import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Navigation from '../Navigation/Navigation';
+import css from './App.module.css';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const CampersPage = lazy(() => import('../../pages/CampersPage/CampersPage'));
-const CamperDetailsPage = lazy(() => import('../../pages/CamperDetailsPage/CamperDetailsPage'));
-const NotFoundPage = lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
+const CamperDetailsPage = lazy(
+  () => import('../../pages/CamperDetailsPage/CamperDetailsPage')
+);
+const NotFoundPage = lazy(
+  () => import('../../pages/NotFoundPage/NotFoundPage')
+);
 
 const App = () => {
   return (
-    <div>
+    <div className={css['container']}>
       <Navigation />
       <Suspense fallback={<div>Loading page...</div>}>
         <Routes>
