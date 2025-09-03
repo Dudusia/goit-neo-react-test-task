@@ -65,6 +65,8 @@ tf:apply:
       ssh://git@${CI_SERVER_HOST}
   script:
     - cd "${TF_ROOT}"
+    - gitlab-terraform init -upgrade
+    - gitlab-terraform plan
     - gitlab-terraform apply
   environment:
     name: ops-$CI_PROJECT_NAME
