@@ -6,15 +6,20 @@ workflow:
       when: always # Run pipeline for all branches
 
 stages:
-  - bootstrap
+  - gh:bootstrap
   - code:release
+  - tf:deploy
 
 variables:
-  CHORE_BOOTSTRAP: '/chore!: bootstrap/'
+  CHORE_BOOTSTRAP_COMMIT: '/chore!: bootstrap/'
+  CHORE_DEPLOY_COMMIT: '/chore!: deploy/'
+  TF_ROOT: "./tf"
+  TF_STATE_NAME: default-do-not-use
+  TERRAFORM_VERSION: 1.5
 
-bootstrap:
+gh:bootstrap:
   image: alpine:latest
-  stage: bootstrap
+  stage: gh:bootstrap
   before_script:
     - apk add --no-cache bash curl jq
   script:
@@ -23,7 +28,7 @@ bootstrap:
   # Triggers only from main with the key word bootstrap
   rules:
     - if:
-        '$CI_COMMIT_MESSAGE =~ $CHORE_BOOTSTRAP && $CI_COMMIT_BRANCH ==
+        '$CI_COMMIT_MESSAGE =~ $CHORE_BOOTSTRAP_COMMIT && $CI_COMMIT_BRANCH ==
         $CI_DEFAULT_BRANCH'
       when: always
 
@@ -46,3 +51,28 @@ code:release:
     - npx semantic-release --ci
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+tf:apply:
+  image: "$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/terraform-images/stable:${TERRAFORM_VERSION}"
+  stage: tf:deploy
+  before_script:
+    - |
+      echo "===> Setting up AWS CLI..."
+      mkdir -p ~/.aws
+      echo "$AWS_CONFIG_FILE_VAR" | sed 's/\r$//' | base64 -d > ~/.aws/config
+      apk add --no-cache aws-cli
+    - git config --global url."https://gitlab-ci-token:${X_TF_RW_TOKEN}@${CI_SERVER_HOST}".insteadOf
+      ssh://git@${CI_SERVER_HOST}
+  script:
+    - cd "${TF_ROOT}"
+    - gitlab-terraform apply
+  # Triggers only from main with the key word bootstrap
+  rules:
+    - if:
+        '$CI_COMMIT_MESSAGE =~ $CHORE_DEPLOY_COMMIT && $CI_COMMIT_BRANCH ==
+        $CI_DEFAULT_BRANCH'
+      when: always
+  variables:
+    TF_STATE_NAME: ops-$CI_PROJECT_NAME
+    TF_VAR_github_repo_name: $GITHUB_USERNAME/$CI_PROJECT_NAME
+
