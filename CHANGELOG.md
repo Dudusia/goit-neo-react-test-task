@@ -1,5 +1,15 @@
 # Changelog goit-neo-react-test-task
 
+## [3.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/2.0.0...3.0.0) (2025-09-03)
+
+### ⚠ BREAKING CHANGES
+
+* deploy
+
+### Miscellaneous Chores
+
+* deploy ([518af7f](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/518af7f9fa4a7029226067c73adbc7fd87fab061))
+
 ## [2.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/1.1.0...2.0.0) (2025-09-03)
 
 ### ⚠ BREAKING CHANGES
