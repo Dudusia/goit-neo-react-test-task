@@ -21,4 +21,4 @@ resource "vercel_deployment" "this" {
   project_id = vercel_project.this.id
   ref        = "main"
   production = tobool(module.this.stage == "prd")
-}   
+}
