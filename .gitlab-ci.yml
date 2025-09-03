@@ -53,7 +53,7 @@ code:release:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 tf:apply:
-  image: "$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/terraform-images/stable:${TERRAFORM_VERSION}"
+  image: "$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/terraform-images/releases/${TERRAFORM_VERSION}"
   stage: tf:deploy
   before_script:
     - |
