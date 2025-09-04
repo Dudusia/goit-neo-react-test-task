@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.1.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.0.0...4.1.0) (2025-09-04)
+
+### Features
+
+* add homepage ([9a4a7ef](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/9a4a7efe39ca855ea7c68476f56d637d5cb20b59))
+
 ## [4.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/3.0.0...4.0.0) (2025-09-03)
 
 ### ⚠ BREAKING CHANGES
