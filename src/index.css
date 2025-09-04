@@ -46,6 +46,8 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
+  display: inline-block;
+  border: none;
 }
 
 address {
