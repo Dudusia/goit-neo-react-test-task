@@ -13,7 +13,7 @@ stages:
 variables:
   CHORE_BOOTSTRAP_COMMIT: '/chore!: bootstrap/'
   CHORE_DEPLOY_COMMIT: '/chore!: deploy/'
-  TF_ROOT: "./tf"
+  TF_ROOT: './tf'
   TF_STATE_NAME: default-do-not-use
   TERRAFORM_VERSION: 1.5
 
@@ -53,7 +53,7 @@ code:release:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 tf:apply:
-  image: "$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/terraform-images/releases/${TERRAFORM_VERSION}"
+  image: '$CI_TEMPLATE_REGISTRY_HOST/gitlab-org/terraform-images/releases/${TERRAFORM_VERSION}'
   stage: tf:deploy
   before_script:
     - |
@@ -61,7 +61,8 @@ tf:apply:
       mkdir -p ~/.aws
       echo "$AWS_CONFIG_FILE_VAR" | sed 's/\r$//' | base64 -d > ~/.aws/config
       apk add --no-cache aws-cli
-    - git config --global url."https://gitlab-ci-token:${X_TF_RW_TOKEN}@${CI_SERVER_HOST}".insteadOf
+    - git config --global
+      url."https://gitlab-ci-token:${X_TF_RW_TOKEN}@${CI_SERVER_HOST}".insteadOf
       ssh://git@${CI_SERVER_HOST}
   script:
     - cd "${TF_ROOT}"
@@ -70,7 +71,7 @@ tf:apply:
     - gitlab-terraform apply
   environment:
     name: ops-$CI_PROJECT_NAME
-  resource_group: "${TF_STATE_NAME}"
+  resource_group: '${TF_STATE_NAME}'
   # Triggers only from main with the key word bootstrap
   rules:
     - if:
@@ -80,4 +81,3 @@ tf:apply:
   variables:
     TF_STATE_NAME: ops-$CI_PROJECT_NAME
     TF_VAR_github_repo_name: $GITHUB_USERNAME/$CI_PROJECT_NAME
-
