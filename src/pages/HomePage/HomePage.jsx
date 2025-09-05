@@ -1,5 +1,5 @@
 import css from './HomePage.module.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
 
 export default function HomePage() {
@@ -9,9 +9,9 @@ export default function HomePage() {
       <h2 className={css['homepage-call-to-action']}>
         You can find everything you want in our catalog
       </h2>
-      <NavLink to="/catalog">
+      <Link to="/catalog">
         <Button text="View Now" type="button"></Button>
-      </NavLink>
+      </Link>
     </div>
   );
 }
