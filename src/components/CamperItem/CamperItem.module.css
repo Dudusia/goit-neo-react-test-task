@@ -1,0 +1,66 @@
+.camper-item-image {
+  border-radius: 10px;
+  object-fit: cover;
+  /* overflow: hidden; */
+}
+
+.camper-item-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reviews-location-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.camper-item-additional-info {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.review-location-info {
+  align-items: center;
+  justify-content: center;
+}
+
+.star-icon {
+  vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.camper-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 486px;
+}
+
+.camper-header-liked-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+}
+
+.camper-item-description {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis */
+  display: block; /* Ensure the element behaves as a block */
+}
+
+.camper-item-info {
+  width: 524px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.show-more-button {
+  margin-top: 0;
+}
