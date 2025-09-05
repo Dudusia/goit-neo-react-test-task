@@ -1,4 +1,6 @@
 .container {
   margin: 0 auto;
   width: 1440px;
+  padding-left: 64px;
+  padding-right: 64px;
 }

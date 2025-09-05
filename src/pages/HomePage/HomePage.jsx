@@ -1,5 +1,6 @@
 import css from './HomePage.module.css';
 import { NavLink } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 
 export default function HomePage() {
   return (
@@ -9,7 +10,7 @@ export default function HomePage() {
         You can find everything you want in our catalog
       </h2>
       <NavLink to="/catalog">
-        <button className={css['catalog-button']}>View Now</button>
+        <Button text="View Now" type="button"></Button>
       </NavLink>
     </div>
   );
