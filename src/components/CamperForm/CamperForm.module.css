@@ -1,0 +1,76 @@
+.form {
+  max-width: 360px;
+}
+.filters-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-legend {
+  color: var(--gray-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.fieldset {
+  all: unset;
+  position: relative;
+}
+
+.location-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.input {
+  border-radius: 12px;
+  background: var(--inputs-color);
+  width: 360px;
+  height: 56px;
+  padding-left: 48px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+}
+
+.map-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  stroke: var(--main-color);
+  pointer-events: none;
+}
+
+.filter-fieldset {
+  margin-top: 32px;
+}
+
+.legend {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--light-gray-color);
+  width: 360px;
+  margin: 24px 0;
+}
+
+.field {
+  all: unset;
+}
+
+.field-selector-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 12px;
+}

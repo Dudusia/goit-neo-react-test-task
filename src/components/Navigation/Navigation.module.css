@@ -6,10 +6,6 @@
   margin-bottom: 24px;
 }
 
-.header-logo {
-  margin-left: 64px;
-}
-
 .navigation-list {
   display: flex;
   flex-direction: row;
