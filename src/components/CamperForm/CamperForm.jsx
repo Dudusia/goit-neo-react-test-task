@@ -33,9 +33,7 @@ export default function CamperForm() {
       validationSchema={CamperSchema}
       onSubmit={handleSubmit}
     >
-      {values => {
-        console.log(values);
-        return (
+      {() => (
           <Form className={css['form']}>
             <legend className={css['main-legend']}>Location</legend>
             <fieldset className={css['fieldset']}>
@@ -143,8 +141,8 @@ export default function CamperForm() {
 
             <Button text="Search" type="submit"></Button>
           </Form>
-        );
-      }}
+        )
+      }
     </Formik>
   );
 }
