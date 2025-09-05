@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.4.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.3.0...4.4.0) (2025-09-05)
+
+### Features
+
+* add camper detail main info ([092f038](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/092f038c5027dd662eab27fd3056e811733be657))
+
 ## [4.3.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.2.0...4.3.0) (2025-09-05)
 
 ### Features
