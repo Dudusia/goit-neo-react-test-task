@@ -52,4 +52,6 @@ export default slice.reducer;
 export const getCampers = state => state.campers.items;
 export const getCampersLoading = state => state.campers.loading;
 export const getCampersError = state => state.campers.error;
+
+// TODO: this should be a separate slice
 export const getSelectedCamper = state => state.campers.selectedItem;
