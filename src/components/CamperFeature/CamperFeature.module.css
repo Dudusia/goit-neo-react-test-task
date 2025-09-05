@@ -1,12 +1,12 @@
 .camper-feature-icon {
-    all: unset;
+  all: unset;
 }
 
 .camper-feature-wrapper {
-    border-radius: 100px;
-    background: var(--badges-color);
-    display: inline-flex;
-    flex-direction: row;
-    gap: 8px;
-    padding: 12px 18px;
+  border-radius: 100px;
+  background: var(--badges-color);
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 12px 18px;
 }

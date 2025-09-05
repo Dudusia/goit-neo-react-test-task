@@ -14,16 +14,16 @@ export default function CampersPage() {
     dispatch(fetchCampers());
   }, [dispatch]);
 
-  const visibleCampers = useSelector(getCampers)
+  const visibleCampers = useSelector(getCampers);
 
   return (
     <div className={css['catalog-container']}>
       <CamperForm></CamperForm>
-      <ul className={css["campers-list"]}>
-          {visibleCampers.map(camper => {
-          return (  
+      <ul className={css['campers-list']}>
+        {visibleCampers.map(camper => {
+          return (
             <li key={camper.id} className={css['camper-item']}>
-              <CamperItem camper={camper}/>
+              <CamperItem camper={camper} />
             </li>
           );
         })}

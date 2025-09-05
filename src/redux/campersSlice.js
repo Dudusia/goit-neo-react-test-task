@@ -19,8 +19,12 @@ const slice = createSlice({
         state.loading = false;
         state.error = null;
         state.page = state.page + 1;
-        state.items = [...state.items, ...action.payload.items.filter(camper => 
-            ! state.items.map(item => item.id).includes(camper.id))];
+        state.items = [
+          ...state.items,
+          ...action.payload.items.filter(
+            camper => !state.items.map(item => item.id).includes(camper.id)
+          ),
+        ];
       })
       .addCase(fetchCampers.rejected, (state, action) => {
         state.loading = false;
@@ -33,4 +37,3 @@ export default slice.reducer;
 export const getCampers = state => state.campers.items;
 export const getCampersLoading = state => state.campers.loading;
 export const getCampersError = state => state.campers.error;
-
