@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.2.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.1.0...4.2.0) (2025-09-05)
+
+### Features
+
+* add catalog search form ([369833e](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/369833eedfef506875a4e2bc89cd52105e146916))
+
 ## [4.1.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.0.0...4.1.0) (2025-09-04)
 
 ### Features
