@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.3.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.2.0...4.3.0) (2025-09-05)
+
+### Features
+
+* add campers list ([fe91df1](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/fe91df1216947650ad60dad010bb29b2e9214db8))
+
 ## [4.2.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.1.0...4.2.0) (2025-09-05)
 
 ### Features
