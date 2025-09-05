@@ -14,3 +14,8 @@ export const fetchCampers = createAsyncThunk(
     return response.data;
   }
 );
+
+export const fetchCamper = createAsyncThunk('campers/fetch', async ({ id }) => {
+  const response = await axios.get(`/${CAMPERS_ENDPOINT}/${id}`);
+  return response.data;
+});

@@ -2,10 +2,12 @@ import css from './CamperItem.module.css';
 import icons from '../../assets/icons.svg';
 import Button from '../Button/Button';
 import CamperFeature from '../CamperFeature/CamperFeature';
+import { Link } from 'react-router-dom';
 
 export default function CamperItem({ camper }) {
   return (
     <>
+      {/* TODO: maybe could be taken out into a separate component */}
       <img
         className={css['camper-item-image']}
         src={camper.gallery[0].original}
@@ -18,6 +20,7 @@ export default function CamperItem({ camper }) {
           <h2 className="camper-item-header">
             <div className={css['camper-header-wrapper']}>
               <span className={css['camper-name']}>{camper.name}</span>
+              {/* TODO: make a separate component */}
               <span className={css['camper-name']}>
                 &euro;{Number(camper.price).toFixed(2)}
               </span>
@@ -27,6 +30,7 @@ export default function CamperItem({ camper }) {
             <use href={`${icons}#icon-heart`}></use>
           </svg>
         </div>
+        {/* TODO: make it into a separate component */}
         <div className={css['camper-item-additional-info']}>
           <div className={css['reviews-location-wrapper']}>
             <svg width="16" height="16" className={css['star-icon']}>
@@ -71,11 +75,13 @@ export default function CamperItem({ camper }) {
             </li>
           )}
         </ol>
-        <Button
-          text="Show more"
-          type="button"
-          additionalClass={css['show-more-button']}
-        ></Button>
+        <Link to={`/catalog/${camper.id}`}>
+          <Button
+            text="Show more"
+            type="button"
+            additionalClass={css['show-more-button']}
+          ></Button>
+        </Link>
       </div>
     </>
   );
