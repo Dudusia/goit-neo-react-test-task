@@ -1,0 +1,82 @@
+import css from './CamperBookingForm.module.css';
+import { useId } from 'react';
+import * as Yup from 'yup';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Button from '../Button/Button';
+import icons from '../../assets/icons.svg';
+
+const CamperSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, 'Name has to be at least 3 characters long!')
+    .max(100, 'Name has to be maximum 100 characters long!')
+    .required('Name is required'),
+});
+
+export default function CamperBookingForm() {
+  const fieldId = useId();
+
+  const handleSubmit = (values, formikHelpers) => {
+    formikHelpers.resetForm();
+  };
+
+  return (
+    <div className={css['camper-booking-container']}>
+      <h3>Book your campervan now</h3>
+      <p className={css['camper-booking-calling']}>
+        Stay connected! We are always ready to help you.
+      </p>
+      <Formik
+        initialValues={{
+          name: '',
+          number: '',
+        }}
+        validationSchema={CamperSchema}
+        onSubmit={handleSubmit}
+      >
+        {() => (
+          <Form className={css['form']}>
+            <fieldset className={css['fieldset']}>
+              <Field
+                type="text"
+                name="name"
+                id={`${fieldId}-name`}
+                placeholder="Name*"
+                className={css['input']}
+              />
+              <ErrorMessage name="email" component="span" />
+              <Field
+                type="text"
+                name="email"
+                id={`${fieldId}-email`}
+                placeholder="Email*"
+                className={css['input']}
+              />
+              <ErrorMessage name="email" component="span" />
+              <Field
+                type="date"
+                name="name"
+                id={`${fieldId}-name`}
+                placeholder="Booking date*"
+                className={css['input']}
+              />
+              {/* <ErrorMessage name="name" component="span" /> */}
+              <Field
+                type="text"
+                name="comment"
+                id={`${fieldId}-comment`}
+                placeholder="Comment"
+                className={[css['comment'], css['input']].join(' ')}
+              />
+            </fieldset>
+
+            <Button
+              text="Search"
+              type="submit"
+              additionalClass={css['send-button']}
+            ></Button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+}

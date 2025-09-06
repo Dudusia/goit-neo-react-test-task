@@ -1,0 +1,43 @@
+.input {
+  border: none;
+  display: inline-flex;
+  width: 100%;
+  border-radius: 12px;
+  background: var(--inputs-color);
+  padding: 18px;
+}
+
+input::placeholder {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+}
+
+.fieldset {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.camper-booking-calling {
+  margin-bottom: 24px;
+}
+
+.camper-booking-container {
+  padding: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--light-gray-color);
+}
+
+.comment {
+  height: 118px;
+}
+
+.send-button {
+  margin-left: auto;
+  margin-right: auto;
+}

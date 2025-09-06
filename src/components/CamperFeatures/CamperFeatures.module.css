@@ -1,0 +1,6 @@
+.camper-features-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+}
