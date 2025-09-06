@@ -20,15 +20,14 @@ const CamperSchema = Yup.object().shape({
 export default function CamperForm() {
   const fieldId = useId();
 
-  const handleSubmit = (values, formikHelpers) => {
-    formikHelpers.resetForm();
+  const handleSubmit = (values) => {
+    console.log(values);
   };
 
   return (
     <Formik
       initialValues={{
-        name: '',
-        number: '',
+        location: ''
       }}
       validationSchema={CamperSchema}
       onSubmit={handleSubmit}

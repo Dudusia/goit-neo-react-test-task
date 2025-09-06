@@ -1,5 +1,5 @@
 import css from './FieldSelector.module.css';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Field, useField } from 'formik';
 import icons from '../../assets/icons.svg';
 
 export default function FieldSelector({
@@ -9,6 +9,8 @@ export default function FieldSelector({
   displayValue,
   iconId,
 }) {
+  const [field] = useField({ type, name, value });
+
   return (
     <>
       <label className={css['field-selector-option']}>
@@ -18,7 +20,9 @@ export default function FieldSelector({
           value={value}
           className={css['field-selector']}
         />
-        <div className={css['field-selector-wrapper']}>
+        <div className={`${css['field-selector-wrapper']} ${
+          field.checked ? css['field-selector-wrapper-selected'] : ''
+        }`}>
           <svg width="32" height="32" className={css['field-selector-icon']}>
             <use href={`${icons}#${iconId}`}></use>
           </svg>
