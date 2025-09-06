@@ -52,3 +52,18 @@
   line-height: 1.5;
   margin-bottom: 60px;
 }
+
+.camper-info-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.camper-info-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--light-gray-color);
+  width: 100%;
+  margin-bottom: 44px;
+}
