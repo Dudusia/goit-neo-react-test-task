@@ -1,0 +1,33 @@
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background: var(--badges-color);
+    text-align: center;
+    align-content: center;
+    color: var(--button-color);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.reviewer-comment {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}

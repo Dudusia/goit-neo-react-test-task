@@ -1,0 +1,11 @@
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}

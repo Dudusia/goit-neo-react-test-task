@@ -3,8 +3,6 @@ import css from './CamperDetails.module.css';
 import { getSelectedCamper } from '../../redux/campersSlice';
 import CamperFeature from '../CamperFeature/CamperFeature';
 
-// "engine": "diesel"
-
 export default function CamperDetails() {
   const camper = useSelector(getSelectedCamper);
   return (
