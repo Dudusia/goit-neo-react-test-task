@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import icons from '../../assets/icons.svg';
 import css from './Navigation.module.css';
 
 export default function Navigation() {
+  const location = useLocation();
+
   return (
     <header>
-      <div className={[css['container'], css['header-container']].join(' ')}>
+      <div className={[css['header-container'], 'container'].join(' ')}>
         <Link to="/">
           <svg width="136" height="16" className={css['header-logo']}>
             <use href={`${icons}#icon-logo`}></use>
@@ -15,13 +17,16 @@ export default function Navigation() {
           <ul className={css['navigation-list']}>
             <li
               className={[
-                css['navigation-list-item-accent'],
+                location.pathname === "/" && css['navigation-list-item-accent'],
                 css['navigation-list-item'],
               ].join(' ')}
             >
               <Link to="/">Home</Link>
             </li>
-            <li className={css['navigation-list-item']}>
+            <li className={[
+              location.pathname === "/catalog" && css['navigation-list-item-accent'],
+              css['navigation-list-item'],
+              ].join(' ')}>
               <Link to="/catalog">Catalog</Link>
             </li>
           </ul>

@@ -16,7 +16,7 @@ const CamperReviews = lazy(() => import('../CamperReviews/CamperReviews'));
 
 const App = () => {
   return (
-    <div className={css['container']}>
+    <div className={[css["main-container"], "container"].join(" ")}>
       <Navigation />
       <Suspense fallback={<div>Loading page...</div>}>
         <Routes>

@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: row;
   gap: 450px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--badges-color);
+  background: var(--inputs-color);
 }
 
 .navigation-list {
@@ -14,11 +16,7 @@
 
 .navigation-list-item {
   text-align: center;
-  font-family: var(--primary-font);
-  font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 .navigation-list-item-accent {

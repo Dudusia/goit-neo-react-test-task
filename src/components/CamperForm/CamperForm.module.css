@@ -8,9 +8,6 @@
 
 .main-legend {
   color: var(--gray-color);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
   margin-bottom: 8px;
 }
 
@@ -31,9 +28,9 @@
   height: 56px;
   padding-left: 48px;
   border: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
+  
+  
+  ;
   display: block;
 }
 

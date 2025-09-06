@@ -12,9 +12,7 @@
 }
 
 .reviewer-name {
-    font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
 }
 
 .reviewer-info {
@@ -27,7 +25,7 @@
 
 .reviewer-comment {
     color: var(--text-color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
+    
+    
+    ;
 }
