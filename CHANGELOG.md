@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.8.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.7.0...4.8.0) (2025-09-06)
+
+### Features
+
+* add reviews ([06f75ca](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/06f75ca176f54e355984d0b6eac36f231c5163a9))
+
 ## [4.7.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.6.1...4.7.0) (2025-09-06)
 
 ### Features
