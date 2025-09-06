@@ -4,18 +4,12 @@
     url('../../assets/images/home-background.png');
   padding-top: 256px;
   padding-bottom: 260px;
-  padding-left: 64px;
   color: var(--inputs-color);
 }
 
 .homepage-title {
+  margin-bottom: 16px;
   font-size: 48px;
   font-weight: 600;
   line-height: 0.67;
-}
-
-.homepage-call-to-action {
-  margin-top: 16px;
-  font-size: 24px;
-  line-height: 1.33;
 }
