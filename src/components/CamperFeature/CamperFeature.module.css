@@ -1,5 +1,6 @@
 .camper-feature-icon {
-  all: unset;
+  fill: none;
+  stroke: var(--main-color);
 }
 
 .camper-feature-wrapper {

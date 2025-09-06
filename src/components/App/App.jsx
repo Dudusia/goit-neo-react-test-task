@@ -23,8 +23,8 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CampersPage />} />
           <Route path="/catalog/:camperId" element={<CamperDetailsPage />}>
-            <Route path="reviews" element={<CamperFeatures />} />
-            <Route path="features" element={<CamperReviews />} />
+            <Route path="features" element={<CamperFeatures />} />
+            <Route path="reviews" element={<CamperReviews />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

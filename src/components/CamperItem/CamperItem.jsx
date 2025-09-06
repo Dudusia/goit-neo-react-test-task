@@ -48,6 +48,7 @@ export default function CamperItem({ camper }) {
           </div>
         </div>
         <p className={css['camper-item-description']}>{camper.description}</p>
+        {/* TODO: should be made into separate component? */}
         <ol className={css['camper-item-features']}>
           {camper.transmission === 'automatic' && (
             <li className={css['camper-item-feature']}>

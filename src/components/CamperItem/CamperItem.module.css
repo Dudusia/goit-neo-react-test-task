@@ -4,13 +4,6 @@
   /* overflow: hidden; */
 }
 
-.camper-item-features {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
 .reviews-location-wrapper {
   display: flex;
   flex-direction: row;
@@ -63,4 +56,11 @@
 
 .show-more-button {
   margin-top: 0;
+}
+
+.camper-item-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
 }

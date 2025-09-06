@@ -1,0 +1,42 @@
+.camper-features-wrapper {
+  width: 631px;
+  padding: 44px 52px;
+  border-radius: 10px;
+  background: var(--inputs-color);
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.camper-item-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.camper-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--light-gray-color);
+  width: 100%;
+  margin: 24px 0;
+}
+
+.properties-table {
+  text-transform: capitalize;
+}
+
+table {
+  width: 100%;
+}
+tr {
+  display: flex;
+  justify-content: space-between;
+}
