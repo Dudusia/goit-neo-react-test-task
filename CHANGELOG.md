@@ -1,5 +1,17 @@
 # Changelog goit-neo-react-test-task
 
+## [4.9.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.8.0...4.9.0) (2025-09-06)
+
+### Features
+
+* add working load more button ([320f680](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/320f680c89f1e3c143c760dd1ab141b0a4a617be))
+
+### Bug Fixes
+
+* add accent to the nav based on location and remove extra styling ([062e4f0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/062e4f04e3ad4986f8dade7534c28fd747e99a75))
+* make checkboxes and radio selection visible ([88b6609](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/88b66091c47f3e2f70a546a44cf93a0c52cd52cf))
+* remove extra styles from home page ([807f916](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/807f91616aa535ff3c12528465b2b9f2a1fd1217))
+
 ## [4.8.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.7.0...4.8.0) (2025-09-06)
 
 ### Features
