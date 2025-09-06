@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.5.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.4.0...4.5.0) (2025-09-06)
+
+### Features
+
+* add internal camper navigation ([c822c41](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/c822c41130b0342f540c28189371c5ac7f77702a))
+
 ## [4.4.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.3.0...4.4.0) (2025-09-05)
 
 ### Features
