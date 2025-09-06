@@ -1,5 +1,12 @@
 # Changelog goit-neo-react-test-task
 
+## [4.6.1](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.6.0...4.6.1) (2025-09-06)
+
+### Bug Fixes
+
+* add tbody wrapper ([2a75e0b](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/2a75e0b194f51c527901361e0c9ea9d9c794d22a))
+* logo icon naming ([dec710f](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/dec710f00543d5af464a713a95e106ce893c642e))
+
 ## [4.6.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.5.0...4.6.0) (2025-09-06)
 
 ### Features
