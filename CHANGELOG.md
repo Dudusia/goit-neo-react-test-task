@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-test-task
 
+## [4.7.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.6.1...4.7.0) (2025-09-06)
+
+### Features
+
+* add booking form ([2947f68](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/2947f68834f1a7df719ee17d542d8ea91acec044))
+
 ## [4.6.1](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.6.0...4.6.1) (2025-09-06)
 
 ### Bug Fixes
