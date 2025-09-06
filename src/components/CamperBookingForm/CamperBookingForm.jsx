@@ -3,7 +3,6 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../Button/Button';
-import icons from '../../assets/icons.svg';
 
 const CamperSchema = Yup.object().shape({
   name: Yup.string()

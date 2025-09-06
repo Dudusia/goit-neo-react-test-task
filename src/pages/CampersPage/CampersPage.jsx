@@ -3,7 +3,7 @@ import CamperForm from '../../components/CamperForm/CamperForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCampers } from '../../redux/campersOps';
-import { getCampers } from '../../redux/campersSlice';
+import { getCampersPage, getCampers, setPage, areThereMoreCampers } from '../../redux/campersSlice';
 import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
 
@@ -15,20 +15,29 @@ export default function CampersPage() {
   }, [dispatch]);
 
   const visibleCampers = useSelector(getCampers);
+  const nextPage = useSelector(getCampersPage) + 1;
+  const hasMoreCampers = useSelector(areThereMoreCampers)
+
+  const handleClick = () => {
+    dispatch(fetchCampers({page: nextPage}));
+    dispatch(setPage(nextPage))
+  }
 
   return (
-    <div className={css['catalog-container']}>
-      <CamperForm></CamperForm>
-      <ul className={css['campers-list']}>
-        {visibleCampers.map(camper => {
-          return (
-            <li key={camper.id} className={css['camper-item']}>
-              <CamperItem camper={camper} />
-            </li>
-          );
-        })}
-      </ul>
-      {/* <Button text="Load more" type="submit"></Button> */}
+    <div className={[css['catalog-container'], 'container'].join(' ')}>
+        <CamperForm />
+        <div className={css["camper-list-wrapper"]}>
+          <ul className={css['campers-list']}>
+            {visibleCampers.map(camper => {
+              return (
+                <li key={camper.id} className={css['camper-item']}>
+                  <CamperItem camper={camper} />
+                </li>
+              );
+            })}
+          </ul>
+          {hasMoreCampers && <Button text="Load more" type="submit" additionalClass={css["load-more-btn"]} handleClick={handleClick}></Button>}
+        </div>
     </div>
   );
 }

@@ -19,3 +19,5 @@ export const fetchCamper = createAsyncThunk('campers/fetch', async ({ id }) => {
   const response = await axios.get(`/${CAMPERS_ENDPOINT}/${id}`);
   return response.data;
 });
+
+export const updatePage = ( { page } ) => (page)

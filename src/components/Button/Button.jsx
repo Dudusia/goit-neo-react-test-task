@@ -1,8 +1,9 @@
 import css from './Button.module.css';
+import clsx from 'clsx';
 
-export default function Button({ text, type, additionalClass = '' }) {
+export default function Button({ text, type, handleClick = null, additionalClass = '' }) {
   return (
-    <button className={[additionalClass, css['button']].join(' ')} type={type}>
+    <button className={clsx(css['button'], additionalClass)} type={type} onClick={handleClick}>
       {text}
     </button>
   );
