@@ -11,6 +11,8 @@ const CamperDetailsPage = lazy(
 const NotFoundPage = lazy(
   () => import('../../pages/NotFoundPage/NotFoundPage')
 );
+const CamperFeatures = lazy(() => import('../CamperFeatures/CamperFeatures'));
+const CamperReviews = lazy(() => import('../CamperReviews/CamperReviews'));
 
 const App = () => {
   return (
@@ -20,7 +22,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CampersPage />} />
-          <Route path="/catalog/:camperId" element={<CamperDetailsPage />} />
+          <Route path="/catalog/:camperId" element={<CamperDetailsPage />}>
+            <Route path="reviews" element={<CamperFeatures />} />
+            <Route path="features" element={<CamperReviews />} />
+          </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

@@ -5,6 +5,7 @@ import { getSelectedCamper } from '../../redux/campersSlice';
 import { useParams } from 'react-router-dom';
 import css from './CamperDetailsPage.module.css';
 import icons from '../../assets/icons.svg';
+import { Link, Outlet } from 'react-router-dom';
 
 export default function CamperDetailsPage() {
   const { camperId } = useParams();
@@ -56,6 +57,19 @@ export default function CamperDetailsPage() {
         </ol>
         {/* TODO: this should be a generic one */}
         <p className={css['camper-description']}>{camper.description}</p>
+
+        <div className={css['camper-info-links']}>
+          <Link to="features">
+            <h3 className={[css['camper-info-link']]}>Features</h3>
+          </Link>
+          <Link to="reviews">
+            <h3 className={[css['camper-info-link']]}>Reviews</h3>
+          </Link>
+        </div>
+
+        <hr className={css['camper-info-divider']} />
+
+        <Outlet />
       </div>
     )
   );
