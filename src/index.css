@@ -18,6 +18,7 @@
 body {
   font-family: var(--primary-font);
   color: var(--main-color);
+  line-height: 1.5;
 }
 
 h1,
@@ -34,6 +35,18 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2'
+}
+
+p {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 ul,
