@@ -1,5 +1,29 @@
 # Changelog goit-neo-react-test-task
 
+## [6.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/5.0.0...6.0.0) (2025-09-07)
+
+### ⚠ BREAKING CHANGES
+
+* use camper main info component in the camper details page
+
+### Features
+
+* add gaps for the table rows ([1c13886](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/1c13886f4ee445ddabc4c3d40a9b8cdbc591816a))
+* add loader ([84d3468](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/84d3468d912eecf3adebd0b7a437520a1dc36670))
+* add loader to lazy load ([7dd356d](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/7dd356d751b9e4f914ada3fd826b3a304c0830a3))
+* add star based on reviewer rating ([9c49ddd](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/9c49ddd199c25192cd3e1d3a4056e0179ba1e65c))
+
+### Bug Fixes
+
+* add justify-content to the booking form wrapper ([99444bc](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/99444bc1ad550742203d18f201e0d6b941c1ed6c))
+* make comment component text area ([78d6f72](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/78d6f72264c33bc7dd96f9c37dc4ccb27c0e8f52))
+* svgs getting filled in fully black ([1365366](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/1365366e1ef8016f9dedfa4025fcb30e79ad51a6))
+* text colors on campers page ([539a382](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/539a3828d6e0db770b7e6fcad061d94ffdfc6412))
+
+### Code Refactoring
+
+* use camper main info component in the camper details page ([4465bdd](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/4465bdd7eeaccf4699181817e65bf4fac564882a))
+
 ## [5.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.9.0...5.0.0) (2025-09-07)
 
 ### ⚠ BREAKING CHANGES
