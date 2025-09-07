@@ -1,13 +1,13 @@
 .camper-main-info {
-    flex-direction: column;
-    gap: 16px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .camper-details-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 60px;
 }
 
 .camper-image {

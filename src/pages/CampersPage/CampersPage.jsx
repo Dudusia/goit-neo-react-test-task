@@ -51,7 +51,7 @@ export default function CampersPage() {
             );
           })}
         </ul>
-        {(hasMoreCampers && !isLoading) && (
+        {hasMoreCampers && !isLoading && (
           <Button
             text="Load more"
             type="submit"

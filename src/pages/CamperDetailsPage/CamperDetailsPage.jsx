@@ -18,14 +18,17 @@ export default function CamperDetailsPage() {
 
   const camper = useSelector(getSelectedCamper);
   const location = useLocation();
-  const isLoading = useSelector(getCampersLoading)
+  const isLoading = useSelector(getCampersLoading);
 
   return (
     camper !== null && (
-      <div className={['container', css["camper-page-container"]].join(" ")}>
+      <div className={['container', css['camper-page-container']].join(' ')}>
         {isLoading && <Loader />}
-        <div className={css["camper-details-wrapper"]}>
-          <CamperMainInfo camper={camper} aditionalClasses={[css['camper-main-info']]}/>
+        <div className={css['camper-details-wrapper']}>
+          <CamperMainInfo
+            camper={camper}
+            aditionalClasses={[css['camper-main-info']]}
+          />
           <ol className={css['camper-images-list']}>
             {camper.gallery.map(photo => (
               <li key={photo.original}>
