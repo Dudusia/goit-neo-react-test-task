@@ -1,8 +1,3 @@
-.camper-feature-icon {
-  /* fill: none; */
-  stroke: var(--main-color);
-}
-
 .camper-feature-wrapper {
   border-radius: 100px;
   background: var(--badges-color);
