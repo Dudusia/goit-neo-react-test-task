@@ -16,7 +16,7 @@ export default function CamperDetailsPage() {
   }, [dispatch, camperId]);
 
   const camper = useSelector(getSelectedCamper);
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     camper !== null && (
@@ -59,14 +59,26 @@ export default function CamperDetailsPage() {
 
         <div className={css['camper-info-links']}>
           <Link to="features">
-            <h3 className={[
-              !location.pathname.includes("reviews") && css['camper-info-link-accent'],
-              css['camper-info-link']].join(" ")}>Features</h3>
+            <h3
+              className={[
+                !location.pathname.includes('reviews') &&
+                  css['camper-info-link-accent'],
+                css['camper-info-link'],
+              ].join(' ')}
+            >
+              Features
+            </h3>
           </Link>
           <Link to="reviews">
-            <h3 className={[
-              location.pathname.includes("reviews") && css['camper-info-link-accent'],
-              css['camper-info-link']].join(" ")}>Reviews</h3>
+            <h3
+              className={[
+                location.pathname.includes('reviews') &&
+                  css['camper-info-link-accent'],
+                css['camper-info-link'],
+              ].join(' ')}
+            >
+              Reviews
+            </h3>
           </Link>
         </div>
 

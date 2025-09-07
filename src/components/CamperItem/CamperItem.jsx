@@ -3,8 +3,12 @@ import icons from '../../assets/icons.svg';
 import Button from '../Button/Button';
 import CamperFeature from '../CamperFeature/CamperFeature';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addLikedCamper, removeLikedCamper } from '../../redux/campersSlice';
 
-export default function CamperItem({ camper }) {
+export default function CamperItem({ camper, isSelected }) {
+  const dispatch = useDispatch();
+
   return (
     <>
       {/* TODO: maybe could be taken out into a separate component */}
@@ -26,7 +30,19 @@ export default function CamperItem({ camper }) {
               </span>
             </div>
           </h2>
-          <svg width="26" height="24" className={css['heart-icon']}>
+          <svg
+            width="26"
+            height="24"
+            className={[
+              isSelected && css['heart-icon-selected'],
+              css['heart-icon'],
+            ].join(' ')}
+            onClick={() => {
+              isSelected
+                ? dispatch(removeLikedCamper(camper.id))
+                : dispatch(addLikedCamper(camper.id));
+            }}
+          >
             <use href={`${icons}#icon-heart`}></use>
           </svg>
         </div>

@@ -64,3 +64,11 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.heart-icon {
+  cursor: pointer;
+}
+
+.heart-icon-selected {
+  fill: var(--button-color);
+}

@@ -8,6 +8,7 @@ import {
   getCampers,
   setPage,
   areThereMoreCampers,
+  getCampersLikedItems,
 } from '../../redux/campersSlice';
 import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
@@ -24,6 +25,7 @@ export default function CampersPage() {
   const nextPage = useSelector(getCampersPage) + 1;
   const hasMoreCampers = useSelector(areThereMoreCampers);
   const assginedFilters = useSelector(getFilter);
+  const likedItems = useSelector(getCampersLikedItems);
 
   const handleClick = () => {
     dispatch(fetchCampers({ page: nextPage, filters: assginedFilters }));
@@ -38,7 +40,10 @@ export default function CampersPage() {
           {visibleCampers.map(camper => {
             return (
               <li key={camper.id} className={css['camper-item']}>
-                <CamperItem camper={camper} />
+                <CamperItem
+                  camper={camper}
+                  isSelected={likedItems.includes(camper.id)}
+                />
               </li>
             );
           })}

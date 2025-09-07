@@ -59,7 +59,7 @@
 }
 
 .camper-info-link-accent {
-    position: relative;
+  position: relative;
 }
 .camper-info-link-accent::after {
   content: '';
