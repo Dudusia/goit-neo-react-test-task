@@ -1,5 +1,27 @@
 # Changelog goit-neo-react-test-task
 
+## [5.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.9.0...5.0.0) (2025-09-07)
+
+### ⚠ BREAKING CHANGES
+
+* move out main info about camper into separate component
+
+### Features
+
+* add default styles for h3 and p ([413412d](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/413412db682f57c5daf7d4794978c24b98fc2ad2))
+* add liked items and ability to like ([9668cf2](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/9668cf21d7604f48aa38d14e34e7f8f56b40f2b9))
+* default subroute for camper details page and add underline for selected subpage ([8339794](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/833979429287c43cead2fc8b1e6138c63d4bdb34))
+* make filters working ([0a52365](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/0a52365df7c50015b9770dce927f9b98187e91c2))
+
+### Bug Fixes
+
+* booking form sizing ([3efbce0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/3efbce0fc0dfe90078bc1c467bde9c73c5245ef3))
+* camper images sizing ([599c4f9](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/599c4f9eb72368c367562ccd3e16262b7013a9a4))
+
+### Code Refactoring
+
+* move out main info about camper into separate component ([a7b8b93](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/a7b8b939b0db9a9011fcd36a978d685f32b669d8))
+
 ## [4.9.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/4.8.0...4.9.0) (2025-09-06)
 
 ### Features
