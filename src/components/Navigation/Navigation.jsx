@@ -17,16 +17,19 @@ export default function Navigation() {
           <ul className={css['navigation-list']}>
             <li
               className={[
-                location.pathname === "/" && css['navigation-list-item-accent'],
+                location.pathname === '/' && css['navigation-list-item-accent'],
                 css['navigation-list-item'],
               ].join(' ')}
             >
               <Link to="/">Home</Link>
             </li>
-            <li className={[
-              location.pathname === "/catalog" && css['navigation-list-item-accent'],
-              css['navigation-list-item'],
-              ].join(' ')}>
+            <li
+              className={[
+                location.pathname === '/catalog' &&
+                  css['navigation-list-item-accent'],
+                css['navigation-list-item'],
+              ].join(' ')}
+            >
               <Link to="/catalog">Catalog</Link>
             </li>
           </ul>

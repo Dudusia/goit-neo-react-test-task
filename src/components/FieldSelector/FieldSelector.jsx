@@ -20,9 +20,11 @@ export default function FieldSelector({
           value={value}
           className={css['field-selector']}
         />
-        <div className={`${css['field-selector-wrapper']} ${
-          field.checked ? css['field-selector-wrapper-selected'] : ''
-        }`}>
+        <div
+          className={`${css['field-selector-wrapper']} ${
+            field.checked ? css['field-selector-wrapper-selected'] : ''
+          }`}
+        >
           <svg width="32" height="32" className={css['field-selector-icon']}>
             <use href={`${icons}#${iconId}`}></use>
           </svg>

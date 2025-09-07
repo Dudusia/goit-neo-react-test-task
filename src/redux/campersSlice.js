@@ -1,19 +1,29 @@
 import { createSelector, createSlice } from '@reduxjs/toolkit';
 import { fetchCampers, fetchCamper } from './campersOps';
 
+const initialState = {
+  total: 0,
+  items: [],
+  selectedItem: null,
+  loading: false,
+  error: null,
+  page: 1,
+  limit: 5,
+};
+
 const slice = createSlice({
   name: 'campers',
-  initialState: {
-    total: 0,
-    items: [],
-    selectedId: null,
-    selectedItem: null,
-    loading: false,
-    error: null,
-    page: 1,
-    limit: 5,
-  },
+  initialState: initialState,
   reducers: {
+    resetCampersState: state => {
+      state.total = initialState.total;
+      state.items = initialState.items;
+      state.selectedItem = initialState.selectedItem;
+      state.loading = initialState.loading;
+      state.error = initialState.error;
+      state.page = initialState.page;
+      state.limit = initialState.limit;
+    },
     setPage: (state, action) => {
       state.page = action.payload;
     },
@@ -33,7 +43,7 @@ const slice = createSlice({
             camper => !state.items.map(item => item.id).includes(camper.id)
           ),
         ];
-        state.total = action.payload.total
+        state.total = action.payload.total;
       })
       .addCase(fetchCampers.rejected, (state, action) => {
         state.loading = false;
@@ -51,10 +61,10 @@ const slice = createSlice({
       .addCase(fetchCamper.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-      })
+      }),
 });
 
-export const { setPage } = slice.actions;
+export const { setPage, resetCampersState } = slice.actions;
 
 export default slice.reducer;
 
@@ -65,7 +75,10 @@ export const getCampersPage = state => state.campers.page;
 export const getCampersLimit = state => state.campers.limit;
 export const getCampersTotal = state => state.campers.total;
 
-export const areThereMoreCampers = createSelector([getCampersPage, getCampersLimit, getCampersTotal], (page, limit, total) => ( page * limit < total));
+export const areThereMoreCampers = createSelector(
+  [getCampersPage, getCampersLimit, getCampersTotal],
+  (page, limit, total) => page * limit < total
+);
 
 // TODO: this should be a separate slice
 export const getSelectedCamper = state => state.campers.selectedItem;

@@ -6,13 +6,13 @@
 }
 
 .camper-list-wrapper {
-    margin-bottom: 52px;
+  margin-bottom: 52px;
 }
 
 .campers-list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .camper-item {
@@ -25,12 +25,12 @@
 }
 
 .load-more-btn {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 16px 32px;
-    border-radius: 200px;
-    border: 1px solid var(--light-gray-color);
-    background-color: unset;
-    /* background-color: none; */
-    color: currentColor;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px 32px;
+  border-radius: 200px;
+  border: 1px solid var(--light-gray-color);
+  background-color: unset;
+  /* background-color: none; */
+  color: currentColor;
 }
