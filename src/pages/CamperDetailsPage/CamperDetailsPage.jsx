@@ -48,8 +48,6 @@ export default function CamperDetailsPage() {
                 className={css['camper-image']}
                 src={photo.original}
                 alt={camper.name}
-                width="292px"
-                height="312px"
               />
             </li>
           ))}

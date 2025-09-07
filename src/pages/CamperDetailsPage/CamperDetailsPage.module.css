@@ -28,6 +28,8 @@
 .camper-image {
   border-radius: 10px;
   object-fit: cover;
+  width: 292px;
+  height: 312px;
 }
 
 .camper-images-list {
