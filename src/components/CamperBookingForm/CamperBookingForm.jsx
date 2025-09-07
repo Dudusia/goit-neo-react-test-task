@@ -52,7 +52,7 @@ export default function CamperBookingForm() {
             <ErrorMessage name="email" component="span" />
             <Field
               type="date"
-              name="name"
+              name="date"
               id={`${fieldId}-date`}
               placeholder="Booking date*"
               className={css['input']}
@@ -61,6 +61,7 @@ export default function CamperBookingForm() {
             <Field
               type="text"
               name="comment"
+              component="textarea"
               id={`${fieldId}-comment`}
               placeholder="Comment"
               className={[css['comment'], css['input']].join(' ')}

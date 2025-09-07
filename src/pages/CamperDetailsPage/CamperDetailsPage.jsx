@@ -11,9 +11,10 @@ import Loader from '../../components/Loader/Loader';
 export default function CamperDetailsPage() {
   const { camperId } = useParams();
   const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(fetchCamper({ id: camperId }));
+    if (camperId) {
+      dispatch(fetchCamper({ id: camperId }));
+    }
   }, [dispatch, camperId]);
 
   const camper = useSelector(getSelectedCamper);
