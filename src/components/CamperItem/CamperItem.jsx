@@ -1,14 +1,14 @@
 import css from './CamperItem.module.css';
-import icons from '../../assets/icons.svg';
 import Button from '../Button/Button';
 import CamperFeature from '../CamperFeature/CamperFeature';
 import { Link } from 'react-router-dom';
+import CamperMainInfo from '../CamperMainInfo/CamperMainInfo';
 import { useDispatch } from 'react-redux';
 import { addLikedCamper, removeLikedCamper } from '../../redux/campersSlice';
+import icons from '../../assets/icons.svg';
 
 export default function CamperItem({ camper, isSelected }) {
   const dispatch = useDispatch();
-
   return (
     <>
       {/* TODO: maybe could be taken out into a separate component */}
@@ -20,51 +20,8 @@ export default function CamperItem({ camper, isSelected }) {
         height="320px"
       />
       <div className={css['camper-item-info']}>
-        <div className={css['camper-header-liked-wrapper']}>
-          <h2 className="camper-item-header">
-            <div className={css['camper-header-wrapper']}>
-              <span className={css['camper-name']}>{camper.name}</span>
-              {/* TODO: make a separate component */}
-              <span className={css['camper-name']}>
-                &euro;{Number(camper.price).toFixed(2)}
-              </span>
-            </div>
-          </h2>
-          <svg
-            width="26"
-            height="24"
-            className={[
-              isSelected && css['heart-icon-selected'],
-              css['heart-icon'],
-            ].join(' ')}
-            onClick={() => {
-              isSelected
-                ? dispatch(removeLikedCamper(camper.id))
-                : dispatch(addLikedCamper(camper.id));
-            }}
-          >
-            <use href={`${icons}#icon-heart`}></use>
-          </svg>
-        </div>
-        {/* TODO: make it into a separate component */}
-        <div className={css['camper-item-additional-info']}>
-          <div className={css['reviews-location-wrapper']}>
-            <svg width="16" height="16" className={css['star-icon']}>
-              <use href={`${icons}#icon-star`}></use>
-            </svg>
-            <p className={css['review-location-info']}>
-              {camper.rating} ({camper.reviews.length} Reviews)
-            </p>
-          </div>
-          <div className={css['reviews-location-wrapper']}>
-            <svg width="16" height="16" className={css['map-icon']}>
-              <use href={`${icons}#icon-map`}></use>
-            </svg>
-            <p className={css['review-location-info']}>{camper.location}</p>
-          </div>
-        </div>
+        <CamperMainInfo camper={camper} isSelected={isSelected} />
         <p className={css['camper-item-description']}>{camper.description}</p>
-        {/* TODO: should be made into separate component? */}
         <ol className={css['camper-item-features']}>
           {camper.transmission === 'automatic' && (
             <li className={css['camper-item-feature']}>
@@ -100,6 +57,21 @@ export default function CamperItem({ camper, isSelected }) {
           ></Button>
         </Link>
       </div>
+      <svg
+        width="32"
+        height="32"
+        className={[
+          isSelected && css['heart-icon-selected'],
+          css['heart-icon'],
+        ].join(' ')}
+        onClick={() => {
+          isSelected
+            ? dispatch(removeLikedCamper(camper.id))
+            : dispatch(addLikedCamper(camper.id));
+        }}
+      >
+        <use href={`${icons}#icon-heart`}></use>
+      </svg>
     </>
   );
 }

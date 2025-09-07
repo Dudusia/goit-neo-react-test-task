@@ -19,61 +19,61 @@ export default function CamperBookingForm() {
   };
 
   return (
-      <Formik
-        initialValues={{
-          name: '',
-          number: '',
-        }}
-        validationSchema={CamperSchema}
-        onSubmit={handleSubmit}
-      >
-        {() => (
-          <Form className={css['form']}>
-            <h3 className={css['camper-title']}>Book your campervan now</h3>
-            <p className={css['camper-booking-calling']}>
-                Stay connected! We are always ready to help you.
-            </p>
-            <fieldset className={css['fieldset']}>
-              <Field
-                type="text"
-                name="name"
-                id={`${fieldId}-name`}
-                placeholder="Name*"
-                className={css['input']}
-              />
-              <ErrorMessage name="email" component="span" />
-              <Field
-                type="text"
-                name="email"
-                id={`${fieldId}-email`}
-                placeholder="Email*"
-                className={css['input']}
-              />
-              <ErrorMessage name="email" component="span" />
-              <Field
-                type="date"
-                name="name"
-                id={`${fieldId}-date`}
-                placeholder="Booking date*"
-                className={css['input']}
-              />
-              {/* <ErrorMessage name="name" component="span" /> */}
-              <Field
-                type="text"
-                name="comment"
-                id={`${fieldId}-comment`}
-                placeholder="Comment"
-                className={[css['comment'], css['input']].join(' ')}
-              />
-            </fieldset>
+    <Formik
+      initialValues={{
+        name: '',
+        number: '',
+      }}
+      validationSchema={CamperSchema}
+      onSubmit={handleSubmit}
+    >
+      {() => (
+        <Form className={css['form']}>
+          <h3 className={css['camper-title']}>Book your campervan now</h3>
+          <p className={css['camper-booking-calling']}>
+            Stay connected! We are always ready to help you.
+          </p>
+          <fieldset className={css['fieldset']}>
+            <Field
+              type="text"
+              name="name"
+              id={`${fieldId}-name`}
+              placeholder="Name*"
+              className={css['input']}
+            />
+            <ErrorMessage name="email" component="span" />
+            <Field
+              type="text"
+              name="email"
+              id={`${fieldId}-email`}
+              placeholder="Email*"
+              className={css['input']}
+            />
+            <ErrorMessage name="email" component="span" />
+            <Field
+              type="date"
+              name="name"
+              id={`${fieldId}-date`}
+              placeholder="Booking date*"
+              className={css['input']}
+            />
+            {/* <ErrorMessage name="name" component="span" /> */}
+            <Field
+              type="text"
+              name="comment"
+              id={`${fieldId}-comment`}
+              placeholder="Comment"
+              className={[css['comment'], css['input']].join(' ')}
+            />
+          </fieldset>
 
-            <Button
-              text="Send"
-              type="submit"
-              additionalClass={css['send-button']}
-            ></Button>
-          </Form>
-        )}
-      </Formik>
+          <Button
+            text="Send"
+            type="submit"
+            additionalClass={css['send-button']}
+          ></Button>
+        </Form>
+      )}
+    </Formik>
   );
 }

@@ -1,0 +1,36 @@
+.camper-main-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.camper-item-additional-info {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.camper-title {
+  margin-bottom: 8px;
+}
+
+.reviews-location-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.review-location-info {
+  color: var(--main-color);
+}
+
+.star-icon {
+  fill: var(--rating-color);
+}
+
+.camper-price {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
