@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCamper } from '../../redux/campersOps';
 import { getSelectedCamper } from '../../redux/campersSlice';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import css from './CamperDetailsPage.module.css';
 import icons from '../../assets/icons.svg';
 import { Link, Outlet } from 'react-router-dom';
@@ -16,8 +16,7 @@ export default function CamperDetailsPage() {
   }, [dispatch, camperId]);
 
   const camper = useSelector(getSelectedCamper);
-
-  console.log(camper);
+  const location = useLocation()
 
   return (
     camper !== null && (
@@ -60,10 +59,14 @@ export default function CamperDetailsPage() {
 
         <div className={css['camper-info-links']}>
           <Link to="features">
-            <h3 className={[css['camper-info-link']]}>Features</h3>
+            <h3 className={[
+              !location.pathname.includes("reviews") && css['camper-info-link-accent'],
+              css['camper-info-link']].join(" ")}>Features</h3>
           </Link>
           <Link to="reviews">
-            <h3 className={[css['camper-info-link']]}>Reviews</h3>
+            <h3 className={[
+              location.pathname.includes("reviews") && css['camper-info-link-accent'],
+              css['camper-info-link']].join(" ")}>Reviews</h3>
           </Link>
         </div>
 

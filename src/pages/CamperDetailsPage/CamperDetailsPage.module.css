@@ -58,6 +58,19 @@
   margin-bottom: 24px;
 }
 
+.camper-info-link-accent {
+    position: relative;
+}
+.camper-info-link-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -26.5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--button-color);
+}
+
 .camper-info-divider {
   border: none;
   height: 1px;

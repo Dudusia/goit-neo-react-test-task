@@ -54,7 +54,7 @@ export default function CamperBookingForm() {
               <Field
                 type="date"
                 name="name"
-                id={`${fieldId}-name`}
+                id={`${fieldId}-date`}
                 placeholder="Booking date*"
                 className={css['input']}
               />
