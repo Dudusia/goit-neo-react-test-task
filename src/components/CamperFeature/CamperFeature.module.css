@@ -1,5 +1,5 @@
 .camper-feature-icon {
-  fill: none;
+  /* fill: none; */
   stroke: var(--main-color);
 }
 
@@ -10,4 +10,8 @@
   flex-direction: row;
   gap: 8px;
   padding: 12px 18px;
+}
+
+.camper-feature-description {
+  color: var(--main-color);
 }
