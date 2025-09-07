@@ -58,11 +58,10 @@ export default function CamperDetailsPage() {
           </Link>
           <Link to="reviews">
             <h3
-              className={[
+              className={
                 location.pathname.includes('reviews') &&
-                  css['camper-info-link-accent'],
-                css['camper-info-link'],
-              ].join(' ')}
+                css['camper-info-link-accent']
+              }
             >
               Reviews
             </h3>

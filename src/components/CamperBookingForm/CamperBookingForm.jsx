@@ -29,7 +29,7 @@ export default function CamperBookingForm() {
     >
       {() => (
         <Form className={css['form']}>
-          <h3 className={css['camper-title']}>Book your campervan now</h3>
+          <h3>Book your campervan now</h3>
           <p className={css['camper-booking-calling']}>
             Stay connected! We are always ready to help you.
           </p>
