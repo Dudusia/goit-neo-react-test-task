@@ -19,11 +19,6 @@ export default function CamperBookingForm() {
   };
 
   return (
-    <div className={css['camper-booking-container']}>
-      <h3>Book your campervan now</h3>
-      <p className={css['camper-booking-calling']}>
-        Stay connected! We are always ready to help you.
-      </p>
       <Formik
         initialValues={{
           name: '',
@@ -34,6 +29,10 @@ export default function CamperBookingForm() {
       >
         {() => (
           <Form className={css['form']}>
+            <h3 className={css['camper-title']}>Book your campervan now</h3>
+            <p className={css['camper-booking-calling']}>
+                Stay connected! We are always ready to help you.
+            </p>
             <fieldset className={css['fieldset']}>
               <Field
                 type="text"
@@ -69,13 +68,12 @@ export default function CamperBookingForm() {
             </fieldset>
 
             <Button
-              text="Search"
+              text="Send"
               type="submit"
               additionalClass={css['send-button']}
             ></Button>
           </Form>
         )}
       </Formik>
-    </div>
   );
 }

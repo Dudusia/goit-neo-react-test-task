@@ -13,7 +13,13 @@ input::placeholder {
 }
 
 .form {
-  width: 100%;
+  width: 641px;
+  display: flex;
+  flex-shrink: 0; 
+  flex-direction: column;
+  padding: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--light-gray-color);
 }
 
 .fieldset {
@@ -25,13 +31,6 @@ input::placeholder {
 
 .camper-booking-calling {
   margin-bottom: 24px;
-}
-
-.camper-booking-container {
-  padding: 44px;
-  border-radius: 10px;
-  border: 1px solid var(--light-gray-color);
-  width: 641px;
 }
 
 .comment {
