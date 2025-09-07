@@ -9,7 +9,15 @@ export default function CamperReview({ review }) {
         <div>
           <p className={css['reviewer-name']}>{review.reviewer_name}</p>
           {Array.from({ length: 5 }, (_, i) => (
-            <svg key={i} width="16" height="16" className={css['star-icon']}>
+            <svg
+              key={i}
+              width="16"
+              height="16"
+              className={[
+                i <= review.reviewer_rating && css['star-icon-reviews'],
+                css['star-icon'],
+              ].join(' ')}
+            >
               <use href={`${icons}#icon-star`}></use>
             </svg>
           ))}

@@ -17,7 +17,10 @@ export default function CamperMainInfo({ camper, aditionalClasses = [] }) {
               <svg
                 width="16"
                 height="16"
-                className={camper.reviews.length > 0 && css['star-icon']}
+                className={[
+                  css['star-icon'],
+                  camper.reviews.length > 0 && css['star-icon-reviews'],
+                ].join(' ')}
               >
                 <use href={`${icons}#icon-star`}></use>
               </svg>

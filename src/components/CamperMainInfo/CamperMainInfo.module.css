@@ -25,6 +25,10 @@
 }
 
 .star-icon {
+  fill: var(--badges-color);
+}
+
+.star-icon-reviews {
   fill: var(--rating-color);
 }
 
