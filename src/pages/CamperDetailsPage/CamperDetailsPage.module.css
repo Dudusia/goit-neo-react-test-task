@@ -1,28 +1,13 @@
-.reviews-location-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
+.camper-main-info {
+    flex-direction: column;
+    gap: 16px;
 }
 
-.camper-item-additional-info {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.review-location-info {
-  align-items: center;
-  justify-content: center;
-}
-
-.camper-name {
-  margin-bottom: 8px;
-}
-
-.camper-price {
-  margin-bottom: 28px;
+.camper-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 60px;
 }
 
 .camper-image {
@@ -35,22 +20,13 @@
 .camper-images-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 28px;
+  gap: 48px;
 }
 
-/* TODO: take out container to generic css */
-.container {
-  padding-left: 64px;
-  padding-right: 64px;
+.camper-page-container {
   padding-top: 48px;
   padding-bottom: 80px;
-}
-
-.camper-description {
-  color: var(--text-color);
-  margin-bottom: 60px;
 }
 
 .camper-info-links {
@@ -63,6 +39,7 @@
 .camper-info-link-accent {
   position: relative;
 }
+
 .camper-info-link-accent::after {
   content: '';
   position: absolute;
