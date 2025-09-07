@@ -9,10 +9,12 @@ import {
   setPage,
   areThereMoreCampers,
   getCampersLikedItems,
+  getCampersLoading,
 } from '../../redux/campersSlice';
 import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
 import { getFilter } from '../../redux/filtersSlice';
+import Loader from '../../components/Loader/Loader';
 
 export default function CampersPage() {
   const dispatch = useDispatch();
@@ -26,6 +28,7 @@ export default function CampersPage() {
   const hasMoreCampers = useSelector(areThereMoreCampers);
   const assginedFilters = useSelector(getFilter);
   const likedItems = useSelector(getCampersLikedItems);
+  const isLoading = useSelector(getCampersLoading);
 
   const handleClick = () => {
     dispatch(fetchCampers({ page: nextPage, filters: assginedFilters }));
@@ -48,7 +51,7 @@ export default function CampersPage() {
             );
           })}
         </ul>
-        {hasMoreCampers && (
+        {(hasMoreCampers && !isLoading) && (
           <Button
             text="Load more"
             type="submit"
@@ -56,6 +59,7 @@ export default function CampersPage() {
             handleClick={handleClick}
           ></Button>
         )}
+        {isLoading && <Loader />}
       </div>
     </div>
   );

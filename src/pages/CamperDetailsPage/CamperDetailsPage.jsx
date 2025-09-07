@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCamper } from '../../redux/campersOps';
-import { getSelectedCamper } from '../../redux/campersSlice';
+import { getCampersLoading, getSelectedCamper } from '../../redux/campersSlice';
 import { useLocation, useParams } from 'react-router-dom';
 import css from './CamperDetailsPage.module.css';
 import { Link, Outlet } from 'react-router-dom';
 import CamperMainInfo from '../../components/CamperMainInfo/CamperMainInfo';
+import Loader from '../../components/Loader/Loader';
 
 export default function CamperDetailsPage() {
   const { camperId } = useParams();
@@ -17,10 +18,12 @@ export default function CamperDetailsPage() {
 
   const camper = useSelector(getSelectedCamper);
   const location = useLocation();
+  const isLoading = useSelector(getCampersLoading)
 
   return (
     camper !== null && (
       <div className={['container', css["camper-page-container"]].join(" ")}>
+        {isLoading && <Loader />}
         <div className={css["camper-details-wrapper"]}>
           <CamperMainInfo camper={camper} aditionalClasses={[css['camper-main-info']]}/>
           <ol className={css['camper-images-list']}>
