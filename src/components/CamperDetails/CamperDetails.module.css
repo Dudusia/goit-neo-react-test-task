@@ -15,12 +15,6 @@
   gap: 8px;
 }
 
-.camper-section-title {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
 .divider {
   border: none;
   height: 1px;
@@ -31,12 +25,16 @@
 
 .properties-table {
   text-transform: capitalize;
-}
-
-table {
   width: 100%;
 }
-tr {
+
+.table-row {
   display: flex;
   justify-content: space-between;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

@@ -68,31 +68,31 @@ export default function CamperDetails() {
         )}
       </ol>
       <div>
-        <h3 className="camper-section-title">Vehicle details</h3>
+        <h3>Vehicle details</h3>
         <hr className={css['divider']} />
         <table className={css['properties-table']}>
-          <tbody>
-            <tr>
+          <tbody className={css['table-body']}>
+            <tr className={css['table-row']}>
               <td>Form</td>
               <td>{camper.form}</td>
             </tr>
-            <tr>
+            <tr className={css['table-row']}>
               <td>Length</td>
               <td>{camper.length}</td>
             </tr>
-            <tr>
+            <tr className={css['table-row']}>
               <td>Width</td>
               <td>{camper.width}</td>
             </tr>
-            <tr>
+            <tr className={css['table-row']}>
               <td>Height</td>
               <td>{camper.height}</td>
             </tr>
-            <tr>
+            <tr className={css['table-row']}>
               <td>Tank</td>
               <td>{camper.tank}</td>
             </tr>
-            <tr>
+            <tr className={css['table-row']}>
               <td>Consumption</td>
               <td>{camper.consumption}</td>
             </tr>
