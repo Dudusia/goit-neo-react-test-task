@@ -1,5 +1,16 @@
 # Changelog goit-neo-react-test-task
 
+## [6.2.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/6.1.0...6.2.0) (2025-09-08)
+
+### Features
+
+* persist liked items list ([57738c9](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/57738c9dbd93f1ca44e340aceee830e902e388a8))
+* show message on form submission ([750d382](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/750d382f087a0b28ecc80f9872a051e0f3c73ef3))
+
+### Bug Fixes
+
+* use formik instead of custom state for date picker ([663178d](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/663178df8dc4553c550be0cab342099832ea20bb))
+
 ## [6.1.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/6.0.0...6.1.0) (2025-09-08)
 
 ### Features
