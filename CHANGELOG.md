@@ -1,5 +1,21 @@
 # Changelog goit-neo-react-test-task
 
+## [7.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/6.2.0...7.0.0) (2025-09-08)
+
+### ⚠ BREAKING CHANGES
+
+* seperate camper slice
+
+### Bug Fixes
+
+* add default undefined to avoid setting bool for class ([15ed052](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/15ed05286b3f72362b45cd873e4bb078fc1546f5))
+* add initial value to comment so that its reset properly ([7e97991](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/7e97991fb7c0579cecc8e276ffacf25a90ed4a6e))
+* add message for no campers ([2d54e69](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/2d54e69980a3ca4288f5ed2138b870bfbf2bd6d5))
+
+### Code Refactoring
+
+* seperate camper slice ([75e5d5d](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/75e5d5dc712a5ef07859e4f043bb64cb9a9867b4))
+
 ## [6.2.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/6.1.0...6.2.0) (2025-09-08)
 
 ### Features
