@@ -25,6 +25,10 @@
   border: 1px solid var(--light-gray-color);
 }
 
+.no-campers {
+  color: var(--button-color);
+}
+
 .load-more-btn {
   margin-left: auto;
   margin-right: auto;

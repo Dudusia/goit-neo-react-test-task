@@ -41,16 +41,23 @@ export default function CampersPage() {
       <CamperForm />
       <div className={css['camper-list-wrapper']}>
         <ul className={css['campers-list']}>
-          {visibleCampers.map(camper => {
-            return (
-              <li key={camper.id} className={css['camper-item']}>
-                <CamperItem
-                  camper={camper}
-                  isSelected={likedItems.includes(camper.id)}
-                />
-              </li>
-            );
-          })}
+          {!isLoading &&
+            (visibleCampers.length > 0 ? (
+              visibleCampers.map(camper => {
+                return (
+                  <li key={camper.id} className={css['camper-item']}>
+                    <CamperItem
+                      camper={camper}
+                      isSelected={likedItems.includes(camper.id)}
+                    />
+                  </li>
+                );
+              })
+            ) : (
+              <span className={css['no-campers']}>
+                There are no campers satisfying your requirements
+              </span>
+            ))}
         </ul>
         {hasMoreCampers && !isLoading && (
           <Button
