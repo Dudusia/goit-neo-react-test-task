@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import css from './CamperDetails.module.css';
-import { getSelectedCamper } from '../../redux/campersSlice';
+import { getSelectedCamper } from '../../redux/camperSlice';
 import CamperFeature from '../CamperFeature/CamperFeature';
 
 export default function CamperDetails() {

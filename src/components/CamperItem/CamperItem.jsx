@@ -12,7 +12,6 @@ export default function CamperItem({ camper, isSelected }) {
   const dispatch = useDispatch();
   return (
     <>
-      {/* TODO: maybe could be taken out into a separate component */}
       <img
         className={css['camper-item-image']}
         src={camper.gallery[0].original}

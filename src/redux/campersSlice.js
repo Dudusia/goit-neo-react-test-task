@@ -1,10 +1,9 @@
 import { createSelector, createSlice } from '@reduxjs/toolkit';
-import { fetchCampers, fetchCamper } from './campersOps';
+import { fetchCampers } from './campersOps';
 
 const initialState = {
   total: 0,
   items: [],
-  selectedItem: null,
   loading: false,
   error: null,
   page: 1,
@@ -18,7 +17,6 @@ const slice = createSlice({
     resetCampersState: state => {
       state.total = initialState.total;
       state.items = initialState.items;
-      state.selectedItem = initialState.selectedItem;
       state.loading = initialState.loading;
       state.error = initialState.error;
       state.page = initialState.page;
@@ -48,19 +46,6 @@ const slice = createSlice({
       .addCase(fetchCampers.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-      })
-      .addCase(fetchCamper.pending, state => {
-        state.error = null;
-        state.loading = true;
-      })
-      .addCase(fetchCamper.fulfilled, (state, action) => {
-        state.loading = false;
-        state.error = null;
-        state.selectedItem = action.payload;
-      })
-      .addCase(fetchCamper.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
       }),
 });
 
@@ -79,6 +64,3 @@ export const areThereMoreCampers = createSelector(
   [getCampersPage, getCampersLimit, getCampersTotal],
   (page, limit, total) => page * limit < total
 );
-
-// TODO: this should be a separate slice
-export const getSelectedCamper = state => state.campers.selectedItem;

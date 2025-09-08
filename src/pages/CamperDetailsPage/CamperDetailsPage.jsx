@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCamper } from '../../redux/campersOps';
-import { getSelectedCamper } from '../../redux/campersSlice';
 import { useLocation, useParams } from 'react-router-dom';
 import css from './CamperDetailsPage.module.css';
 import { Link, Outlet } from 'react-router-dom';
 import CamperMainInfo from '../../components/CamperMainInfo/CamperMainInfo';
 import clsx from 'clsx';
+import { getSelectedCamper } from '../../redux/camperSlice';
 export default function CamperDetailsPage() {
   const { camperId } = useParams();
   const dispatch = useDispatch();

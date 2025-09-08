@@ -1,6 +1,6 @@
 import css from './CamperReviews.module.css';
 import { useSelector } from 'react-redux';
-import { getSelectedCamper } from '../../redux/campersSlice';
+import { getSelectedCamper } from '../../redux/camperSlice';
 import CamperReview from '../CamperReview/CamperReview';
 import CamperBookingForm from '../CamperBookingForm/CamperBookingForm';
 

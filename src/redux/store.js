@@ -9,6 +9,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import camperReducer from './camperSlice';
 import campersReducer from './campersSlice';
 import filtersReducer from './filtersSlice';
 import favouritesReducer from './favouritesSlice';
@@ -26,6 +27,7 @@ const persistedFavouritesReducer = persistReducer(
 export const store = configureStore({
   reducer: {
     campers: campersReducer,
+    camper: camperReducer,
     filters: filtersReducer,
     favourites: persistedFavouritesReducer,
   },
