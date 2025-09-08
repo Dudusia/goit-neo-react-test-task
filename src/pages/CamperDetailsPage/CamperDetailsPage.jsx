@@ -6,6 +6,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import css from './CamperDetailsPage.module.css';
 import { Link, Outlet } from 'react-router-dom';
 import CamperMainInfo from '../../components/CamperMainInfo/CamperMainInfo';
+import clsx from 'clsx';
 export default function CamperDetailsPage() {
   const { camperId } = useParams();
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ export default function CamperDetailsPage() {
 
   return (
     camper !== null && (
-      <div className={['container', css['camper-page-container']].join(' ')}>
+      <div className={clsx('container', css['camper-page-container'])}>
         <div className={css['camper-details-wrapper']}>
           <CamperMainInfo
             camper={camper}
@@ -43,11 +44,11 @@ export default function CamperDetailsPage() {
         <div className={css['camper-info-links']}>
           <Link to="features">
             <h3
-              className={[
+              className={clsx(
                 !location.pathname.includes('reviews') &&
                   css['camper-info-link-accent'],
                 css['camper-info-link'],
-              ].join(' ')}
+              )}
             >
               Features
             </h3>

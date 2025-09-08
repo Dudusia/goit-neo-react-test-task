@@ -1,5 +1,6 @@
 import css from './CamperReview.module.css';
 import icons from '../../assets/icons.svg';
+import clsx from 'clsx';
 
 export default function CamperReview({ review }) {
   return (
@@ -13,10 +14,10 @@ export default function CamperReview({ review }) {
               key={i}
               width="16"
               height="16"
-              className={[
+              className={clsx(
                 i <= review.reviewer_rating && css['star-icon-reviews'],
                 css['star-icon'],
-              ].join(' ')}
+              )}
             >
               <use href={`${icons}#icon-star`}></use>
             </svg>

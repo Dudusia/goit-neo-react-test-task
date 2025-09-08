@@ -2,6 +2,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import css from './CustomDatePicker.module.css';
 import icons from '../../assets/icons.svg';
+import clsx from 'clsx';
 
 const CustomDatePicker = ({ field, form, ...props }) => {
   return (
@@ -11,7 +12,7 @@ const CustomDatePicker = ({ field, form, ...props }) => {
       dateFormat="dd/MM/yyyy"
       minDate={new Date()}
       placeholderText="Booking date*"
-      className={[props.inputClassName, css['input']].join(' ')}
+      className={clsx(props.inputClassName, css['input'])}
       calendarClassName={css['date-picker-calendar']}
       renderCustomHeader={({
         date,

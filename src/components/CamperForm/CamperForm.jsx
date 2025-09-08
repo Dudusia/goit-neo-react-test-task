@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { resetCampersState } from '../../redux/campersSlice';
 import { fetchCampers } from '../../redux/campersOps';
 import { changeFilter } from '../../redux/filtersSlice';
+import clsx from 'clsx';
 
 const CamperSchema = Yup.object().shape({
   location: Yup.string()
@@ -58,7 +59,7 @@ export default function CamperForm() {
         <Form className={css['form']}>
           <legend className={css['main-legend']}>Location</legend>
           <fieldset
-            className={[css['location-fieldset'], css['fieldset']].join(' ')}
+            className={clsx(css['location-fieldset'], css['fieldset'])}
           >
             <div className={css['location-wrapper']}>
               <Field
@@ -82,7 +83,7 @@ export default function CamperForm() {
 
           <div className={css['filters-wrapper']}>
             <fieldset
-              className={[css['filter-fieldset'], css['fieldset']].join(' ')}
+              className={clsx(css['filter-fieldset'], css['fieldset'])}
             >
               <legend className={css['legend']}>Vehicle equipment</legend>
               <hr className={css['divider']} />
@@ -131,7 +132,7 @@ export default function CamperForm() {
             </fieldset>
 
             <fieldset
-              className={[css['filter-fieldset'], css['fieldset']].join(' ')}
+              className={clsx(css['filter-fieldset'], css['fieldset'])}
             >
               <legend className={css['legend']}>Vehicle type</legend>
               <hr className={css['divider']} />

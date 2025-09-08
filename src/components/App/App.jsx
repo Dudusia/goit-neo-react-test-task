@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react';
 import Navigation from '../Navigation/Navigation';
 import css from './App.module.css';
 import Loader from '../Loader/Loader';
+import clsx from 'clsx';
 
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const CampersPage = lazy(() => import('../../pages/CampersPage/CampersPage'));
@@ -14,7 +15,7 @@ const CamperReviews = lazy(() => import('../CamperReviews/CamperReviews'));
 
 const App = () => {
   return (
-    <div className={[css['main-container'], 'container'].join(' ')}>
+    <div className={clsx(css['main-container'], 'container')}>
       <Navigation />
       <Suspense fallback={<Loader />}>
         <Routes>

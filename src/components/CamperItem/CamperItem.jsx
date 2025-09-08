@@ -6,6 +6,7 @@ import CamperMainInfo from '../CamperMainInfo/CamperMainInfo';
 import { useDispatch } from 'react-redux';
 import { addLikedCamper, removeLikedCamper } from '../../redux/favouritesSlice';
 import icons from '../../assets/icons.svg';
+import clsx from 'clsx';
 
 export default function CamperItem({ camper, isSelected }) {
   const dispatch = useDispatch();
@@ -60,10 +61,10 @@ export default function CamperItem({ camper, isSelected }) {
       <svg
         width="32"
         height="32"
-        className={[
+        className={clsx(
           isSelected && css['heart-icon-selected'],
           css['heart-icon'],
-        ].join(' ')}
+        )}
         onClick={() => {
           isSelected
             ? dispatch(removeLikedCamper(camper.id))

@@ -1,6 +1,7 @@
 import css from './FieldSelector.module.css';
 import { Field, useField } from 'formik';
 import icons from '../../assets/icons.svg';
+import clsx from 'clsx';
 
 export default function FieldSelector({
   type,
@@ -21,9 +22,8 @@ export default function FieldSelector({
           className={css['field-selector']}
         />
         <div
-          className={`${css['field-selector-wrapper']} ${
-            field.checked ? css['field-selector-wrapper-selected'] : ''
-          }`}
+          className={clsx(css['field-selector-wrapper'], 
+            field.checked && css['field-selector-wrapper-selected'])}
         >
           <svg width="32" height="32" className={css['field-selector-icon']}>
             <use href={`${icons}#${iconId}`}></use>

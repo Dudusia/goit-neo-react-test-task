@@ -1,14 +1,15 @@
 import css from './CamperMainInfo.module.css';
 import icons from '../../assets/icons.svg';
+import clsx from 'clsx';
 
 export default function CamperMainInfo({ camper, aditionalClasses = [] }) {
   return (
     <>
       <div
-        className={[
+        className={clsx(
           ...aditionalClasses,
           css['camper-main-info-container'],
-        ].join(' ')}
+        )}
       >
         <div>
           <h2 className={css['camper-title']}>{camper.name}</h2>
@@ -17,10 +18,10 @@ export default function CamperMainInfo({ camper, aditionalClasses = [] }) {
               <svg
                 width="16"
                 height="16"
-                className={[
+                className={clsx(
                   css['star-icon'],
                   camper.reviews.length > 0 && css['star-icon-reviews'],
-                ].join(' ')}
+                )}
               >
                 <use href={`${icons}#icon-star`}></use>
               </svg>

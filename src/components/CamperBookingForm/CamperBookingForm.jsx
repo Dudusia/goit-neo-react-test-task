@@ -6,6 +6,7 @@ import Button from '../Button/Button';
 import CustomDatePicker from '../CustomDatePicker/CustomDatePicker';
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
+import clsx from 'clsx';
 
 const CamperSchema = Yup.object().shape({
   name: Yup.string()
@@ -86,7 +87,7 @@ export default function CamperBookingForm() {
                 component="textarea"
                 id={`${fieldId}-comment`}
                 placeholder="Comment"
-                className={[css['comment'], css['input']].join(' ')}
+                className={clsx(css['comment'], css['input'])}
               />
             </fieldset>
             <Button

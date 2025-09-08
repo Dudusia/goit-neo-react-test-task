@@ -5,11 +5,11 @@ export default function Button({
   text,
   type,
   handleClick = null,
-  additionalClass = '',
+  additionalClass = null,
 }) {
   return (
     <button
-      className={clsx(css['button'], additionalClass)}
+      className={clsx(additionalClass, css['button'])}
       type={type}
       onClick={handleClick}
     >

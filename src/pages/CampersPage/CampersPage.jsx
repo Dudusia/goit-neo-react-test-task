@@ -15,6 +15,7 @@ import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
 import { getFilter } from '../../redux/filtersSlice';
 import Loader from '../../components/Loader/Loader';
+import clsx from 'clsx';
 
 export default function CampersPage() {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ export default function CampersPage() {
   };
 
   return (
-    <div className={[css['catalog-container'], 'container'].join(' ')}>
+    <div className={clsx(css['catalog-container'], 'container')}>
       <CamperForm />
       <div className={css['camper-list-wrapper']}>
         <ul className={css['campers-list']}>
