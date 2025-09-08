@@ -1,5 +1,16 @@
 # Changelog goit-neo-react-test-task
 
+## [6.1.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/6.0.0...6.1.0) (2025-09-08)
+
+### Features
+
+* add datepicker and form error styling ([cf4be4c](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/cf4be4cf6ac32ab4b3fac0df01fb3fbfc7c81f06))
+* remove not found page and redirect to main page when route not found ([fa81cb3](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/fa81cb3cde3824e2999bf333b7be8f3953b070af))
+
+### Bug Fixes
+
+* remove reduntant loader from camper page ([7fe0687](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/commit/7fe0687132571598df73b095eed98e5376b07df5))
+
 ## [6.0.0](https://gitlab.com/goit-uni/react/goit-neo-react-test-task/compare/5.0.0...6.0.0) (2025-09-07)
 
 ### ⚠ BREAKING CHANGES
