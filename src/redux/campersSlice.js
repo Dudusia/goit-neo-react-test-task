@@ -5,7 +5,6 @@ const initialState = {
   total: 0,
   items: [],
   selectedItem: null,
-  likedItems: [],
   loading: false,
   error: null,
   page: 1,
@@ -27,12 +26,6 @@ const slice = createSlice({
     },
     setPage: (state, action) => {
       state.page = action.payload;
-    },
-    addLikedCamper: (state, action) => {
-      state.likedItems = [...state.likedItems, action.payload];
-    },
-    removeLikedCamper: (state, action) => {
-      state.likedItems = state.likedItems.filter(id => id !== action.payload);
     },
   },
   extraReducers: builder =>
@@ -71,7 +64,7 @@ const slice = createSlice({
       }),
 });
 
-export const { setPage, resetCampersState, addLikedCamper, removeLikedCamper } =
+export const { setPage, resetCampersState } =
   slice.actions;
 
 export default slice.reducer;
@@ -82,7 +75,6 @@ export const getCampersError = state => state.campers.error;
 export const getCampersPage = state => state.campers.page;
 export const getCampersLimit = state => state.campers.limit;
 export const getCampersTotal = state => state.campers.total;
-export const getCampersLikedItems = state => state.campers.likedItems;
 
 export const areThereMoreCampers = createSelector(
   [getCampersPage, getCampersLimit, getCampersTotal],

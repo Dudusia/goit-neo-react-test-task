@@ -8,9 +8,9 @@ import {
   getCampers,
   setPage,
   areThereMoreCampers,
-  getCampersLikedItems,
   getCampersLoading,
 } from '../../redux/campersSlice';
+import { getCampersLikedItems } from '../../redux/favouritesSlice'
 import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
 import { getFilter } from '../../redux/filtersSlice';

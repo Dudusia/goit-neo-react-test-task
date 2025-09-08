@@ -4,7 +4,7 @@ import CamperFeature from '../CamperFeature/CamperFeature';
 import { Link } from 'react-router-dom';
 import CamperMainInfo from '../CamperMainInfo/CamperMainInfo';
 import { useDispatch } from 'react-redux';
-import { addLikedCamper, removeLikedCamper } from '../../redux/campersSlice';
+import { addLikedCamper, removeLikedCamper } from '../../redux/favouritesSlice';
 import icons from '../../assets/icons.svg';
 
 export default function CamperItem({ camper, isSelected }) {
