@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import css from './CustomDatePicker.module.css';
 import icons from '../../assets/icons.svg';
 
 const CustomDatePicker = ({ field, form, ...props }) => {
-  const [startDate, setStartDate] = useState(null);
+
   return (
     <DatePicker
-      selected={startDate}
-      onChange={date => {
-        setStartDate(date);
-        form.setFieldValue(field.name, date);
-      }}
+      selected={field.value}
+      onChange={(date) => form.setFieldValue(field.name, date)}
       dateFormat="dd/MM/yyyy"
       minDate={new Date()}
       placeholderText="Booking date*"
