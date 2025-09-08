@@ -47,7 +47,7 @@ export default function CamperDetailsPage() {
               className={clsx(
                 !location.pathname.includes('reviews') &&
                   css['camper-info-link-accent'],
-                css['camper-info-link'],
+                css['camper-info-link']
               )}
             >
               Features

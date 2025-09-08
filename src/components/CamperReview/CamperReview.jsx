@@ -16,7 +16,7 @@ export default function CamperReview({ review }) {
               height="16"
               className={clsx(
                 i <= review.reviewer_rating && css['star-icon-reviews'],
-                css['star-icon'],
+                css['star-icon']
               )}
             >
               <use href={`${icons}#icon-star`}></use>

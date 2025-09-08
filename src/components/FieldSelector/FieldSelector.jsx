@@ -22,8 +22,10 @@ export default function FieldSelector({
           className={css['field-selector']}
         />
         <div
-          className={clsx(css['field-selector-wrapper'], 
-            field.checked && css['field-selector-wrapper-selected'])}
+          className={clsx(
+            css['field-selector-wrapper'],
+            field.checked && css['field-selector-wrapper-selected']
+          )}
         >
           <svg width="32" height="32" className={css['field-selector-icon']}>
             <use href={`${icons}#${iconId}`}></use>

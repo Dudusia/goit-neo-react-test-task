@@ -19,7 +19,7 @@ export default function Navigation() {
             <li
               className={clsx(
                 location.pathname === '/' && css['navigation-list-item-accent'],
-                css['navigation-list-item'],
+                css['navigation-list-item']
               )}
             >
               <Link to="/">Home</Link>
@@ -28,7 +28,7 @@ export default function Navigation() {
               className={clsx(
                 location.pathname === '/catalog' &&
                   css['navigation-list-item-accent'],
-                css['navigation-list-item'],
+                css['navigation-list-item']
               )}
             >
               <Link to="/catalog">Catalog</Link>

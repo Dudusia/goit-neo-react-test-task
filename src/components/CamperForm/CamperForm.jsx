@@ -58,9 +58,7 @@ export default function CamperForm() {
       {() => (
         <Form className={css['form']}>
           <legend className={css['main-legend']}>Location</legend>
-          <fieldset
-            className={clsx(css['location-fieldset'], css['fieldset'])}
-          >
+          <fieldset className={clsx(css['location-fieldset'], css['fieldset'])}>
             <div className={css['location-wrapper']}>
               <Field
                 type="text"
@@ -82,9 +80,7 @@ export default function CamperForm() {
           <legend className={css['main-legend']}>Filters</legend>
 
           <div className={css['filters-wrapper']}>
-            <fieldset
-              className={clsx(css['filter-fieldset'], css['fieldset'])}
-            >
+            <fieldset className={clsx(css['filter-fieldset'], css['fieldset'])}>
               <legend className={css['legend']}>Vehicle equipment</legend>
               <hr className={css['divider']} />
               <div className={css['field-selector-wrapper']}>
@@ -131,9 +127,7 @@ export default function CamperForm() {
               />
             </fieldset>
 
-            <fieldset
-              className={clsx(css['filter-fieldset'], css['fieldset'])}
-            >
+            <fieldset className={clsx(css['filter-fieldset'], css['fieldset'])}>
               <legend className={css['legend']}>Vehicle type</legend>
               <hr className={css['divider']} />
               <div className={css['field-selector-wrapper']}>

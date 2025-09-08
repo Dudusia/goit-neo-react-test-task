@@ -63,7 +63,7 @@ export default function CamperItem({ camper, isSelected }) {
         height="32"
         className={clsx(
           isSelected && css['heart-icon-selected'],
-          css['heart-icon'],
+          css['heart-icon']
         )}
         onClick={() => {
           isSelected

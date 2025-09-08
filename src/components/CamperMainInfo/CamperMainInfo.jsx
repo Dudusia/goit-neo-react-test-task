@@ -6,10 +6,7 @@ export default function CamperMainInfo({ camper, aditionalClasses = [] }) {
   return (
     <>
       <div
-        className={clsx(
-          ...aditionalClasses,
-          css['camper-main-info-container'],
-        )}
+        className={clsx(...aditionalClasses, css['camper-main-info-container'])}
       >
         <div>
           <h2 className={css['camper-title']}>{camper.name}</h2>
@@ -20,7 +17,7 @@ export default function CamperMainInfo({ camper, aditionalClasses = [] }) {
                 height="16"
                 className={clsx(
                   css['star-icon'],
-                  camper.reviews.length > 0 && css['star-icon-reviews'],
+                  camper.reviews.length > 0 && css['star-icon-reviews']
                 )}
               >
                 <use href={`${icons}#icon-star`}></use>
