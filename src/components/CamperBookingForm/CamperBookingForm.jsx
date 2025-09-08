@@ -33,6 +33,7 @@ export default function CamperBookingForm() {
           name: '',
           date: '',
           email: '',
+          comment: '',
         }}
         validationSchema={CamperSchema}
         onSubmit={handleSubmit}
