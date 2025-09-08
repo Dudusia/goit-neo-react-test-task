@@ -56,8 +56,9 @@ export default function CamperDetailsPage() {
           <Link to="reviews">
             <h3
               className={
-                location.pathname.includes('reviews') &&
-                css['camper-info-link-accent']
+                location.pathname.includes('reviews')
+                  ? css['camper-info-link-accent']
+                  : undefined
               }
             >
               Reviews
