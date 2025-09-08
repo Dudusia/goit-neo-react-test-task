@@ -26,7 +26,6 @@ export default function CamperForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = values => {
-    console.log(values);
     const assginedFilters = {
       ...(values.location && { location: values.location }),
       ...(values.form && { form: values.form }),
