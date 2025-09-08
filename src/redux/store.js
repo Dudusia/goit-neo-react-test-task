@@ -8,17 +8,17 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
+} from 'redux-persist';
 import campersReducer from './campersSlice';
 import filtersReducer from './filtersSlice';
-import favouritesReducer from './favouritesSlice'
-import storage from "redux-persist/lib/storage";
+import favouritesReducer from './favouritesSlice';
+import storage from 'redux-persist/lib/storage';
 
 const persistedFavouritesReducer = persistReducer(
   {
-    key: "app-favourites",
+    key: 'app-favourites',
     storage,
-    whitelist: ["likedItems"],
+    whitelist: ['likedItems'],
   },
   favouritesReducer
 );
@@ -34,7 +34,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-  }),
+    }),
 });
 
 export const persistor = persistStore(store);

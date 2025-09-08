@@ -4,11 +4,10 @@ import css from './CustomDatePicker.module.css';
 import icons from '../../assets/icons.svg';
 
 const CustomDatePicker = ({ field, form, ...props }) => {
-
   return (
     <DatePicker
       selected={field.value}
-      onChange={(date) => form.setFieldValue(field.name, date)}
+      onChange={date => form.setFieldValue(field.name, date)}
       dateFormat="dd/MM/yyyy"
       minDate={new Date()}
       placeholderText="Booking date*"

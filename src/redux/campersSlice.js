@@ -64,8 +64,7 @@ const slice = createSlice({
       }),
 });
 
-export const { setPage, resetCampersState } =
-  slice.actions;
+export const { setPage, resetCampersState } = slice.actions;
 
 export default slice.reducer;
 

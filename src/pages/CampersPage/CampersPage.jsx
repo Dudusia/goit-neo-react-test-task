@@ -10,7 +10,7 @@ import {
   areThereMoreCampers,
   getCampersLoading,
 } from '../../redux/campersSlice';
-import { getCampersLikedItems } from '../../redux/favouritesSlice'
+import { getCampersLikedItems } from '../../redux/favouritesSlice';
 import CamperItem from '../../components/CamperItem/CamperItem';
 import Button from '../../components/Button/Button';
 import { getFilter } from '../../redux/filtersSlice';
