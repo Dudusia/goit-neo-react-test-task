@@ -16,9 +16,12 @@
   position: relative;
 }
 
+.location-fieldset {
+  margin-bottom: 40px;
+}
+
 .location-wrapper {
   position: relative;
-  margin-bottom: 40px;
 }
 
 .input {
@@ -68,4 +71,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 12px;
+}
+
+.error {
+  color: var(--button-color);
 }

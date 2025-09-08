@@ -57,7 +57,9 @@ export default function CamperForm() {
       {() => (
         <Form className={css['form']}>
           <legend className={css['main-legend']}>Location</legend>
-          <fieldset className={css['fieldset']}>
+          <fieldset
+            className={[css['location-fieldset'], css['fieldset']].join(' ')}
+          >
             <div className={css['location-wrapper']}>
               <Field
                 type="text"
@@ -69,7 +71,11 @@ export default function CamperForm() {
                 <use href={`${icons}#icon-map`}></use>
               </svg>
             </div>
-            <ErrorMessage name="location" component="span" />
+            <ErrorMessage
+              className={css['error']}
+              name="location"
+              component="span"
+            />
           </fieldset>
 
           <legend className={css['main-legend']}>Filters</legend>

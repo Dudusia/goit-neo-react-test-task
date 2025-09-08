@@ -9,9 +9,6 @@ const CampersPage = lazy(() => import('../../pages/CampersPage/CampersPage'));
 const CamperDetailsPage = lazy(
   () => import('../../pages/CamperDetailsPage/CamperDetailsPage')
 );
-const NotFoundPage = lazy(
-  () => import('../../pages/NotFoundPage/NotFoundPage')
-);
 const CamperFeatures = lazy(() => import('../CamperFeatures/CamperFeatures'));
 const CamperReviews = lazy(() => import('../CamperReviews/CamperReviews'));
 

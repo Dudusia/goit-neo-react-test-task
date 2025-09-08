@@ -3,12 +3,15 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from '../Button/Button';
+import CustomDatePicker from '../CustomDatePicker/CustomDatePicker';
 
 const CamperSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Name has to be at least 3 characters long!')
     .max(100, 'Name has to be maximum 100 characters long!')
     .required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  date: Yup.date().required('Date is required'),
 });
 
 export default function CamperBookingForm() {
@@ -22,7 +25,8 @@ export default function CamperBookingForm() {
     <Formik
       initialValues={{
         name: '',
-        number: '',
+        date: '',
+        email: '',
       }}
       validationSchema={CamperSchema}
       onSubmit={handleSubmit}
@@ -41,7 +45,11 @@ export default function CamperBookingForm() {
               placeholder="Name*"
               className={css['input']}
             />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage
+              className={css['error']}
+              name="name"
+              component="span"
+            />
             <Field
               type="text"
               name="email"
@@ -49,15 +57,24 @@ export default function CamperBookingForm() {
               placeholder="Email*"
               className={css['input']}
             />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage
+              className={css['error']}
+              name="email"
+              component="span"
+            />
             <Field
               type="date"
               name="date"
               id={`${fieldId}-date`}
               placeholder="Booking date*"
-              className={css['input']}
+              component={CustomDatePicker}
+              inputClassName={css['input']}
             />
-            {/* <ErrorMessage name="name" component="span" /> */}
+            <ErrorMessage
+              className={css['error']}
+              name="date"
+              component="span"
+            />
             <Field
               type="text"
               name="comment"
